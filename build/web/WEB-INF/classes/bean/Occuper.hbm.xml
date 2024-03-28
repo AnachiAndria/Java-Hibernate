@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+    <class name="bean.Occuper" table="OCCUPER">
+        <id name="codeocc" type="int">
+            <column name="codeocc" />
+            <generator class="increment"/>
+        </id>
+        <property name="codesal" type="int">
+            <column name="codesal" />
+        </property>
+        <property name="datee" type="java.lang.String">
+            <column name="datee" />
+        </property>
+        <property name="h1" type="int">
+            <column name="h1" />
+        </property>
+        <property name="h2" type="int">
+            <column name="h2" />
+        </property>
+        <property name="h3" type="int">
+            <column name="h3" />
+        </property>
+        <property name="h4" type="int">
+            <column name="h4" />
+        </property>
+        <property name="h5" type="int">
+            <column name="h5" />
+        </property>
+        <property name="h6" type="int">
+            <column name="h6" />
+        </property>
+    </class>
+</hibernate-mapping>

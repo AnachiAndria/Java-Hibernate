@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<hibernate-configuration>
+    <session-factory>
+        <!-- Paramètres de connexion à la base de données PostgreSQL -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/HibernateP</property>
+        <property name="connection.username">postgres</property>
+        <property name="connection.password">z</property>
+        
+        <property name="connection.pool_size">1</property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+      
+                
+        <property name="show_sql">true</property>
+        
+        <property name="hbm2ddl.auto">validate</property>
+        <!--validate-->
+        <!--create-->
+            <mapping resource="bean/Prof.hbm.xml"/>
+            <mapping resource="bean/Salle.hbm.xml"/>
+            <mapping resource="bean/Occuper.hbm.xml"/>
+        
+    </session-factory>
+            
+        
+</hibernate-configuration>
